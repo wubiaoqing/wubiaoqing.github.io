@@ -1,0 +1,362 @@
+
+ <!DOCTYPE HTML>
+<html >
+<head>
+  <meta charset="UTF-8">
+  
+    <title>图解利用CSS实现三角形 | 无表情</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
+    
+    <meta name="author" content="无表情">
+    
+    <meta name="description" content="利用CSS的border以及它的属性值transparent来实现三角形,其中最主要的是要明白由于div的高度跟宽度都为0，margin，padding也为0，所以元素框的大小就是他的border的叠加，由于相邻boder会重叠，故存在内容宽高时其实任意一边存在的border都是梯形的，当div内容">
+    
+    
+    
+    
+    <link rel="alternate" href="/" title="无表情" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/pacman.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/pacman.jpg">
+    
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+
+</head>
+
+  <body>
+    <header>
+      <div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/logo.svg" alt="无表情" title="无表情"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="无表情">无表情</a></h1>
+				<h2 class="blog-motto"></h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="Menu">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/">Home</a></li>
+					
+						<li><a href="/archives">Archives</a></li>
+					
+					<li>
+					
+					<form class="search" action="" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="text" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search" />
+						<input type="hidden" name="q" value="site:wubiaoqing.github.io">
+					</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2014/09/10/图解利用CSS实现三角形/" title="图解利用CSS实现三角形" itemprop="url">图解利用CSS实现三角形</a>
+  </h1>
+  <p class="article-author">By
+    
+      <a href="http://wubiaoqing.github.io" title="无表情">无表情</a>
+    </p>
+  <p class="article-time">
+    <time datetime="2014-09-10T09:47:56.000Z" itemprop="datePublished">Sep 10 2014</time>
+    Updated:<time datetime="2014-09-10T09:48:47.000Z" itemprop="dateModified">Sep 10 2014</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">Contents</strong>
+		
+		</div>
+		
+		<blockquote>
+<p>利用CSS的border以及它的属性值transparent来实现三角形,其中最主要的是要明白由于div的高度跟宽度都为0，margin，padding也为0，所以元素框的大小就是他的border的叠加，由于相邻boder会重叠，故存在内容宽高时其实任意一边存在的border都是梯形的，当div内容宽高为0时，border就表现为三角形，将四个border的颜色设置为transparent表示边框透明，而将右边框颜色再设置为红色就发现三角形出现了，其实这个三角形是右边框。</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="doctype">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="title">html</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="title">body</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="title">style</span>&gt;</span><span class="css"> </span></div><div class="line">		<span class="id">#triangle-up</span> <span class="rules">{ </span></div><div class="line">			<span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">0px</span></span></span>; </div><div class="line">			<span class="rule"><span class="attribute">height</span>:<span class="value"> <span class="number">0px</span></span></span>;</div><div class="line">			<span class="rule"><span class="attribute">border</span>:<span class="value"> <span class="number">100px</span> solid transparent</span></span>;</div><div class="line">			<span class="rule"><span class="attribute">border-right</span>:<span class="value">  <span class="number">100px</span> solid red</span></span>;</div><div class="line">		 <span class="rule">}</span></div><div class="line">	<span class="tag">&lt;/<span class="title">style</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"triangle-up"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="title">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="title">html</span>&gt;</span></div></pre></td></tr></table></figure>
+
+<blockquote>
+<p>图解</p>
+</blockquote>
+<ol>
+<li>正常的框模型，div的内容width以及height均为50px.黑线划出来的区域就是它的右边框，呈现为一个梯形</li>
+</ol>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="doctype">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="title">html</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="title">body</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="title">style</span>&gt;</span><span class="css"> </span></div><div class="line">		<span class="id">#triangle-up</span> <span class="rules">{ </span></div><div class="line">			<span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">50px</span></span></span>; </div><div class="line">			<span class="rule"><span class="attribute">height</span>:<span class="value"> <span class="number">50px</span></span></span>;</div><div class="line">			<span class="rule"><span class="attribute">border</span>:<span class="value"> <span class="number">100px</span> solid red</span></span>; </div><div class="line">			<span class="rule"><span class="attribute">border-bottom</span>:<span class="value"> <span class="number">100px</span> solid red</span></span>;</div><div class="line">		 <span class="rule">}</span></div><div class="line">	<span class="tag">&lt;/<span class="title">style</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"triangle-up"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="title">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="title">html</span>&gt;</span></div></pre></td></tr></table></figure>
+
+<p><img src="http://segmentfault.com/img/bVcTQf" alt="梯形右边框"></p>
+<ol>
+<li>当div的内容width以及height均为0.黑线划出来的区域就是它的右边框，呈现为一个三角形</li>
+</ol>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="doctype">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="title">html</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="title">body</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="title">style</span>&gt;</span><span class="css"> </span></div><div class="line">		<span class="id">#triangle-up</span> <span class="rules">{ </span></div><div class="line">			<span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">0px</span></span></span>; </div><div class="line">			<span class="rule"><span class="attribute">height</span>:<span class="value"> <span class="number">0px</span></span></span>;</div><div class="line">			<span class="rule"><span class="attribute">border</span>:<span class="value"> <span class="number">100px</span> solid red</span></span>; </div><div class="line">		 <span class="rule">}</span></div><div class="line">	<span class="tag">&lt;/<span class="title">style</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"triangle-up"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="title">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="title">html</span>&gt;</span></div></pre></td></tr></table></figure>
+
+<p><img src="http://segmentfault.com/img/bVcTQh" alt="三角形右边框"></p>
+<ol>
+<li>当div的内容width以及height均为0.上下左边框都为透明的时候，只有右边框显示为红色，三角形就看到了</li>
+</ol>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="doctype">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="title">html</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="title">body</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="title">style</span>&gt;</span><span class="css"> </span></div><div class="line">		<span class="id">#triangle-up</span> <span class="rules">{ </span></div><div class="line">			<span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">0px</span></span></span>; </div><div class="line">			<span class="rule"><span class="attribute">height</span>:<span class="value"> <span class="number">0px</span></span></span>;</div><div class="line">			<span class="rule"><span class="attribute">border</span>:<span class="value"> <span class="number">100px</span> solid transparent</span></span>;</div><div class="line">			<span class="rule"><span class="attribute">border-right</span>:<span class="value">  <span class="number">100px</span> solid red</span></span>;</div><div class="line">		 <span class="rule">}</span></div><div class="line">	<span class="tag">&lt;/<span class="title">style</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"triangle-up"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="title">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="title">html</span>&gt;</span></div></pre></td></tr></table></figure>
+
+<p><img src="http://segmentfault.com/img/bVcTQi" alt="红色三角形"></p>
+<p>结合css其他特性定能做出更有趣的一些效果！</p>
+  
+	</div>
+		<footer class="article-footer clearfix">
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/CSS/">CSS</a>
+  </div>
+
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/CSS/">CSS</a>
+</div>
+
+
+
+<div class="article-share" id="share">
+
+  <div data-url="http://wubiaoqing.github.io/2014/09/10/图解利用CSS实现三角形/" data-title="图解利用CSS实现三角形 | 无表情" data-tsina="null" class="share clearfix">
+  </div>
+
+</div>
+</footer>   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+ <div class="prev" >
+ <a href="/2014/09/10/javascript防反跳技术/" title="javascript防反跳技术">
+  <strong>PREVIOUS:</strong><br/>
+  <span>
+  javascript防反跳技术</span>
+</a>
+</div>
+
+
+<div class="next">
+<a href="/2014/09/10/cssSprites/"  title="网站性能优化之css sprites">
+ <strong>NEXT:</strong><br/> 
+ <span>网站性能优化之css sprites
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="Show Sidebar"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">Contents</strong>
+  
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="Hide Sidebar"></a></div>
+<aside class="clearfix">
+
+  
+<div class="categorieslist">
+	<p class="asidetitle">Categories</p>
+		<ul>
+		
+			<li><a href="/categories/CSS/" title="CSS">CSS<sup>1</sup></a></li>
+		
+			<li><a href="/categories/javascript/" title="javascript">javascript<sup>1</sup></a></li>
+		
+			<li><a href="/categories/前端相关/" title="前端相关">前端相关<sup>2</sup></a></li>
+		
+			<li><a href="/categories/学习/" title="学习">学习<sup>1</sup></a></li>
+		
+			<li><a href="/categories/随笔/" title="随笔">随笔<sup>3</sup></a></li>
+		
+			<li><a href="/categories/骑行人生/" title="骑行人生">骑行人生<sup>2</sup></a></li>
+		
+		</ul>
+</div>
+
+
+  
+<div class="tagslist">
+	<p class="asidetitle">Tags</p>
+		<ul class="clearfix">
+		
+			<li><a href="/tags/CSS/" title="CSS">CSS<sup>1</sup></a></li>
+		
+			<li><a href="/tags/css-sprites/" title="css sprites">css sprites<sup>1</sup></a></li>
+		
+			<li><a href="/tags/javascript/" title="javascript">javascript<sup>1</sup></a></li>
+		
+			<li><a href="/tags/photos/" title="photos">photos<sup>1</sup></a></li>
+		
+			<li><a href="/tags/骑行人生/" title="骑行人生">骑行人生<sup>1</sup></a></li>
+		
+		</ul>
+</div>
+
+
+  <div class="rsspart">
+	<a href="/" target="_blank" title="rss">RSS</a>
+</div>
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<div class="social-font" class="clearfix">
+		
+		
+		
+		
+	</div>
+		<p class="copyright">Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/A-limon/pacman" target="_blank" title="Pacman">Pacman</a> © 2014 
+		
+		<a href="http://wubiaoqing.github.io" target="_blank" title="无表情">无表情</a>
+		
+		</p>
+</div>
+</footer>
+    <script src="/js/jquery-2.1.0.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else
+    {
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      h  = $('article h2')
+      ah = $('article h2'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  if(ah.length==0){
+    t.css('display','none');
+  }else{
+    c.click(function(){
+      ta.css('display', 'block').addClass('fadeIn');
+    });
+    o.click(function(){
+      ta.css('display', 'none');
+    });
+    $(window).scroll(function(){
+      ta.css("top",Math.max(140,320-$(this).scrollTop()));
+    });
+  };
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina');
+  var html = [
+  '<a href="#" class="overlay" id="qrcode"></a>',
+  '<div class="qrcode clearfix"><span>扫描二维码分享到微信朋友圈</span><a class="qrclose" href="#share"></a><strong>Loading...Please wait</strong><img id="qrcode-pic" data-src="http://s.jiathis.com/qrcode.php?url=' + encodedUrl + '"/></div>',
+  '<a href="#textlogo" class="article-back-to-top" title="Top"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="QRcode"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="Weibo"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+  $('.article-share-qrcode').click(function(){
+    var imgSrc = $('#qrcode-pic').attr('data-src');
+    $('#qrcode-pic').attr('src', imgSrc);
+    $('#qrcode-pic').load(function(){
+        $('.qrcode strong').text(' ');
+    });
+  });
+});     
+</script>
+
+
+
+
+
+
+  </body>
+</html>
