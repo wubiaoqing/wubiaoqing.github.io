@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>京东笔试页面(兼容IE6)</title>
+	<link rel="stylesheet" href="./home.css">
+	<!--[if IE 6]>
+		<style>
+			#mpage{
+				width:100%;
+				min-width:990px;
+				position:relative;
+				_width: expression(((document.compatMode && document.compatMode=='CSS1Compat')? document.documentElement.clientWidth : document.body.clientWidth) < 990? '990px' : 'auto'); 
+			}
+			.div-goods .innerRight .ul-goods li{
+				margin-right: 5%;
+			}
+
+			.div-goods .innerRight .ul-goods li.li-ieHack{
+				margin-bottom: -2px;
+			}
+			.div-goods .innerRight{
+				width: 63%;
+			}
+
+			.div-goods .innerRight .ul-goods li .div-goodsInfo{
+				height: 40px;
+			}
+			.ul-banner li.banner-ie6Hack{
+				border: none;
+			}
+			.h1-columnName{
+				width: 80%;
+			}
+			.div-goods .innerLeft .top{
+				overflow-x: hidden;
+			}
+
+			.div-carousel-ieHack{
+				height: 241px;				
+			}
+		</style>
+	<![endif]-->
+</head>
+<body>
+
+	<div class="container" id="mpage"> 
+
+	<!-- 图片轮播DIV 开始-->
+		<div class="div-carousel"  id="div-carousel">
+			<div class="div-pageTurn div-pre" id="div-pre"><</div>
+            <div class="div-pageTurn div-next" id="div-next">></div>
+			<a href="#" id="a-carousel"><img src="./images/lunbo_3.png" /></a>
+			<div id="div-carousel-img"></div>
+		</div>
+
+	<!-- 图片轮播DIV 结束-->
+
+
+	<!-- banner 开始 -->
+	<div class="div-banner">
+		<ul class="ul-banner"> 
+			<li> 
+				<div class="banner-desc banner-first">
+					<h4>100%海外正品</h4>
+					<span>"我"跟"它们"不是一路货色</span>
+				</div>
+			</li>
+			<li> 
+
+				<div class="banner-desc banner-second">
+					<h4>国际直邮</h4>
+					<span>给你飞回来的"惊喜无限"</span>
+				</div>
+			</li>
+			<li> 
+				<div class="banner-desc banner-third">
+					<h4>便宜有好货</h4>
+					<span>性价比,始终是我们的使命！</span>
+				</div>
+			</li>
+			<li class="banner-ie6Hack"> 
+				<div class="banner-desc banner-fouth">
+					<h4>总有新奇</h4>
+					<span>努力,只为买到你的"超喜欢"</span>
+				</div>
+			</li>
+		</ul>
+	</div>
+
+	<!-- banner 结束 -->
+
+
+
+	<div class="div-goods left"> 
+
+		<div class="innerLeft"> 
+			<div class="top"> 
+
+					<h1 class="h1-columnName">美妆馆</h1>
+					
+					<P class="p-columnName">BEAUTY MAKEUP</P>
+
+					<p class="p-columnType">PAVILION</p>
+			</div>
+			<div class="middle"> 
+				<h5 class="h5-column">明星店铺</h5>
+				<p class="p-shopName">SOSO新妆专营店</p>
+			</div>
+			<div class="bottom"> 
+				<h5 class="h5-column">热门品牌</h5>
+				<p class="shop-icon"> 
+					<span class="first"></span>
+					<span class="second"></span>
+				</p>
+			</div>
+		</div>
+
+		<div class="innerRight"> 
+			<div class="top"> 
+				<h5>推荐商品</h5>
+				<ul>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+			</div>
+			
+			<ul class="ul-goods"> 
+				<li class="li-ieHack"> 
+					<div class="div-img">
+						<a href="#"><img src="./images/image1.png"></a>
+						<p class="p-price"><span>￥</span>159.00</p>
+					</div>
+					<p class="div-goodsInfo"><a href="#">[资生堂]安热安耐晒沙安耐霜/霜60ML</a></p>
+				</li>
+				<li>
+					<div class="div-img">
+						<a href="#"><img src="./images/image2.png"></a>
+						<p class="p-price"><span>￥</span>159.00</p>
+					</div>
+					<p class="div-goodsInfo"><a href="#">[资生堂]安热安耐晒沙安耐霜/霜60ML</a></p>
+				</li>
+				<li>
+					<div class="div-img">
+						<a href="#"><img src="./images/image3.png"></a>
+						<p class="p-price"><span>￥</span>159.00</p>
+					</div>
+					<p class="div-goodsInfo"><a href="#">[资生堂]安热安耐晒沙安耐霜/霜60ML</a></p>
+				</li>
+				<li>
+					<div class="div-img">
+						<a href="#"><img src="./images/image4.png"></a>
+						<p class="p-price"><span>￥</span>159.00</p>
+					</div>
+					<p class="div-goodsInfo"><a href="#">[资生堂]安热安耐晒沙安耐霜/霜60ML</a></p>
+				</li>
+				<div class="clear"></div>
+			</ul>
+		</div>
+		
+	</div>
+
+
+	<div class="div-goods right"> 
+
+		<div class="innerLeft"> 
+			<div class="top"> 
+					<h1 class="h1-columnName">亲子馆</h1>
+					
+					<P class="p-columnName">PARENTS CHILDREN</P>
+
+					<p class="p-columnType">PAVILION</p>
+			</div>
+			<div class="middle"> 
+				<h5 class="h5-column">明星店铺</h5>
+				<p class="p-shopName">SOSO新妆专营店</p>
+			</div>
+			<div class="bottom"> 
+				<h5 class="h5-column">热门品牌</h5>
+				<p class="shop-icon"> 
+					<span class="first"></span>
+					<span class="second"></span>
+				</p>
+			</div>
+		</div>
+
+		<div class="innerRight"> 
+			<div class="top"> 
+				<h5>推荐商品</h5>
+				<ul>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+			</div>
+			
+			<ul class="ul-goods"> 
+				<li class="li-ieHack"> 
+					<div class="div-img">
+						<a href="#"><img src="./images/image1.png"></a>
+						<p class="p-price"><span>￥</span>159.00</p>
+					</div>
+					<p class="div-goodsInfo"><a href="#">[资生堂]安热安耐晒沙安耐霜/霜60ML</a></p>
+				</li>
+				<li>
+					<div class="div-img">
+						<a href="#"><img src="./images/image2.png"></a>
+						<p class="p-price"><span>￥</span>159.00</p>
+					</div>
+					<p class="div-goodsInfo"><a href="#">[资生堂]安热安耐晒沙安耐霜/霜60ML</a></p>
+				</li>
+				<li>
+					<div class="div-img">
+						<a href="#"><img src="./images/image3.png"></a>
+						<p class="p-price"><span>￥</span>159.00</p>
+					</div>
+					<p class="div-goodsInfo"><a href="#">[资生堂]安热安耐晒沙安耐霜/霜60ML</a></p>
+				</li>
+				<li>
+					<div class="div-img">
+						<a href="#"><img src="./images/image4.png"></a>
+						<p class="p-price"><span>￥</span>159.00</p>
+					</div>
+					<p class="div-goodsInfo"><a href="#">[资生堂]安热安耐晒沙安耐霜/霜60ML</a></p>
+				</li>
+				<div class="clear"></div>
+			</ul>
+		</div>
+		
+	</div>
+
+	<div class="clear"></div>
+
+	</div>
+	<script src="./libs/jquery-1.11.1.js"></script>
+	<script src="./js/home.js"></script>
+</body>
+</html>

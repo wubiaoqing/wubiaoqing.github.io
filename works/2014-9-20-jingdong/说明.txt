@@ -1,0 +1,8 @@
+
+  1，  由于兼容性， jqeury版本需要为 1.x；
+
+  2，  初始状态为图片自动轮播；
+
+  3，  直接打开index.html即可查看效果；
+
+  4,   所用IE6测试工具为微软的superPreview，由于superPreviw不支持运行js，故图片轮播不正常，请在真实IE6下查看
